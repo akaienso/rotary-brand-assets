@@ -4,30 +4,34 @@
   src: url(/typography/frutiger/FrutigerLTStd-Light.woff) format(woff);
 }
 header {
-  font-family: Frutiger, Open Sans Light, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin: 2em;
-  color: rgb(23, 69, 143);
 }
-header .rotary-text {
+
+.rotary-text {
   width: 41%;
 }
-header .rotary-text,
-header .masterbrand {
+
+.rotary-text,
+.masterbrand {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
 }
-header .rotary-masterbrand-signature {
+
+.rotary-masterbrand-signature {
   min-width: 150px;
   max-width: 400px;
   padding: 10px;
+  font-family: Frutiger, Open Sans Light, Arial, Helvetica, sans-serif;
+  color: rgb(23, 69, 143);
 }
-header .rotary-masterbrand-signature-inner {
+
+.rotary-masterbrand-signature-inner {
   display: flex;
   min-width: 150px;
   max-width: 400px;
@@ -35,22 +39,27 @@ header .rotary-masterbrand-signature-inner {
   align-items: center;
   gap: 4%;
 }
-header .rotary-text-group {
+
+.rotary-text-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Aligns text to the right */
+  align-items: flex-end;
+  /* Aligns text to the right */
   max-width: 100%;
 }
-header .rotary-text img {
+
+.rotary-text img {
   width: 100%;
   height: 25%;
 }
-header .masterbrand {
+
+.masterbrand {
   height: 60%;
   width: 16%;
 }
-header .text-above,
-header .text-below {
+
+.text-above,
+.text-below {
   font-family: Frutiger-light, Open Sans Light;
   font-size: 1em;
   text-align: right;
@@ -58,11 +67,13 @@ header .text-below {
   width: 84%;
   margin-left: -4%;
 }
-header .text-above {
+
+.text-above {
   position: relative;
   top: 7px;
 }
-header .text-below {
+
+.text-below {
   position: relative;
   top: -10px;
 }
@@ -210,6 +221,28 @@ main button.ryla:active {
   background-color: #ec2e81;
   border-color: #ec2e81;
   color: rgb(255, 255, 255);
+}
+main .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main .grid-container .header {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+main .grid-container .image-container img {
+  max-width: 400px;
+  width: 100%;
+}
+main .grid-container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* if you want the items to stack vertically */
+  height: 100%; /* if you want the items to take full height of the parent */
 }
 
 footer {
